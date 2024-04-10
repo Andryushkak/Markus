@@ -11,17 +11,18 @@ class create
     private static $password;
 
     public static function main()
-    {
-        self::$first_name = (isset( $_POST['first_name'] ) ) ? $_POST['first_name'] : '';
-        self::$last_name  = (isset( $_POST['last_name' ] ) ) ? $_POST['last_name' ] : '';
-        self::$email      = (isset( $_POST['email'     ] ) ) ? $_POST['email'     ] : '';
-        self::$image      = (isset( $_POST['image'     ] ) ) ? $_POST['image'     ] : '';
-        self::$password   = (isset( $_POST['password'  ] ) ) ? $_POST['password'  ] : '';
+{
+    self::$first_name = (isset( $_POST['first_name'] ) ) ? $_POST['first_name'] : '';
+    self::$last_name  = (isset( $_POST['last_name' ] ) ) ? $_POST['last_name' ] : '';
+    self::$email      = (isset( $_POST['email'     ] ) ) ? $_POST['email'     ] : '';
+    self::$image      = (isset( $_POST['image'     ] ) ) ? $_POST['image'     ] : '';
+    self::$password   = (isset( $_POST['password'  ] ) ) ? $_POST['password'  ] : '';
 
-        DataBase::main(); // Establish database connection
+    DataBase::connect(); // Establish database connection
 
-        self::audit();
-    }
+    self::audit();
+}
+
 
     private static function audit()
     {
