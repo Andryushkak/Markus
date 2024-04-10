@@ -18,7 +18,7 @@ class create
     self::$image      = (isset( $_POST['image'     ] ) ) ? $_POST['image'     ] : '';
     self::$password   = (isset( $_POST['password'  ] ) ) ? $_POST['password'  ] : '';
 
-    DataBase::connect(); // Establish database connection
+    DataBase::main();
 
     self::audit();
 }
